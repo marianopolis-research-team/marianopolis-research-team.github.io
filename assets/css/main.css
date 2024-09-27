@@ -3014,7 +3014,17 @@
 			}
 
 		}
-
+/*ummmmmm**/
+.image-container {
+	display: flex;
+	justify-content: space-between; /* Spacing between images */
+  }
+  
+  .image-container img {
+	width: 40%; /* Ensures 5 images fit on a line (5 x 18% = 90%) */
+	height: auto; /* Keeps the aspect ratio */
+  }
+  
 /* Footer */
 
 	#footer .inner {
