@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Calendar, Users, FileText, ArrowLeft, Beaker, BookOpen } from 'lucide-react';
+import { Calendar, Users, FileText, ArrowLeft, Beaker, BookOpen, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -38,6 +38,18 @@ export default function DNAExtractionPage() {
             <p className="text-xl md:text-2xl text-secondary max-w-3xl">
               Fruit DNA extraction and analysis using various techniques
             </p>
+
+            {/* View Article Button */}
+            <div className="mt-8">
+              <a
+                href="/articles/Final Report_DNA Analysis Project.pdf"
+                className="inline-flex items-center gap-3 bg-secondary text-primary px-6 py-3 rounded-lg font-semibold hover:bg-white transition-all duration-300 shadow-lg"
+              >
+                <FileText className="w-5 h-5" />
+                View Published Article
+                <ExternalLink className="w-4 h-4" />
+              </a>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -239,7 +251,7 @@ export default function DNAExtractionPage() {
               <h2 className="text-3xl font-bold mb-6">Project Resources</h2>
               <div className="space-y-4">
                 <a 
-                  href="https://docs.google.com/document/d/1M4HJzgoqy4YCSecYNC1C0x-swliLzHz5ISi5T3rlC9U/edit?usp=sharing"
+                  href="https://docs.google.com/document/d/1bJ9QyFKOUJ1LHnC7qCd515OtPryIZiGSNFgDFyB8w9I/edit?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-colors rounded-xl p-6"
@@ -247,13 +259,13 @@ export default function DNAExtractionPage() {
                   <div className="flex items-center justify-between">
                     <div>
                       <h3 className="font-semibold text-lg mb-2">Research Challenge</h3>
-                      <p className="text-secondary text-sm">Protocol development and standard curve preparation</p>
+                      <p className="text-secondary text-sm">Help us make the lab protocol and get a chance to help make the standard curve of calf thymus DNA</p>
                     </div>
                     <FileText className="w-6 h-6" />
                   </div>
                 </a>
                 <a 
-                  href="https://docs.google.com/presentation/d/10uN0dzC9XYiNHpEy8opDjgyBek4obdr1/edit?usp=sharing&ouid=114641253321317277215&rtpof=true&sd=true"
+                  href="https://docs.google.com/presentation/d/1y7OVCaaV8hAlWeaWw1zam4lXRqXUMmfH0Dp3h0WwKOI/edit?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-colors rounded-xl p-6"
@@ -261,7 +273,33 @@ export default function DNAExtractionPage() {
                   <div className="flex items-center justify-between">
                     <div>
                       <h3 className="font-semibold text-lg mb-2">DNA Lab Info Session Slides</h3>
-                      <p className="text-secondary text-sm">October 2024 - Project overview and protocol briefing</p>
+                      <p className="text-secondary text-sm">October 2024 - Lab protocol briefing and project overview</p>
+                    </div>
+                    <FileText className="w-6 h-6" />
+                  </div>
+                </a>
+                <a 
+                  href="https://docs.google.com/spreadsheets/d/1SsYNW1PCvA1ErrDCxatfG3jt8HyklQxtT9Dl82yc_eo/edit?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-colors rounded-xl p-6"
+                >
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h3 className="font-semibold text-lg mb-2">Lab Project Participation Sheet</h3>
+                      <p className="text-secondary text-sm">Choose what you want to work on for the DNA extraction lab project</p>
+                    </div>
+                    <FileText className="w-6 h-6" />
+                  </div>
+                </a>
+                <a 
+                  href="/articles/Final Report_DNA Analysis Project.pdf"
+                  className="block bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-colors rounded-xl p-6"
+                >
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h3 className="font-semibold text-lg mb-2">Final Report - DNA Analysis Project</h3>
+                      <p className="text-secondary text-sm">Published research article (PDF)</p>
                     </div>
                     <FileText className="w-6 h-6" />
                   </div>

@@ -94,6 +94,23 @@ function ArchiveDetailContent({ item }: { item: Event }) {
                 )}
               </div>
             )}
+
+            {/* View Article Button for published papers/projects */}
+            {item.resources && item.resources.some(r => (r.type === 'pdf' || r.type === 'drive') && (r.title.toLowerCase().includes('literature review') || r.title.toLowerCase().includes('covid') || r.title.toLowerCase().includes('report') || r.title.toLowerCase().includes('final report'))) && (
+              <div className="mt-8">
+                {item.resources.filter(r => (r.type === 'pdf' || r.type === 'drive') && (r.title.toLowerCase().includes('literature review') || r.title.toLowerCase().includes('covid') || r.title.toLowerCase().includes('report') || r.title.toLowerCase().includes('final report'))).slice(0, 1).map((resource, index) => (
+                  <a
+                    key={index}
+                    href={resource.url}
+                    className="inline-flex items-center gap-3 bg-secondary text-primary px-6 py-3 rounded-lg font-semibold hover:bg-white transition-all duration-300 shadow-lg"
+                  >
+                    <FileText className="w-5 h-5" />
+                    View Published Article
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </section>

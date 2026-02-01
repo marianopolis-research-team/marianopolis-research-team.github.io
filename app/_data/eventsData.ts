@@ -215,6 +215,61 @@ export const events: Event[] = [
     ],
   },
   
+  // Current Lab Projects
+  {
+    slug: 'supercooling-2026',
+    type: 'project',
+    title: 'Supercooling Fruits: Effects on Food Preservation',
+    description: 'Our lab project this year is on supercooling!',
+    longDescription: 'Our 2026 research project investigates the fascinating phenomenon of supercooling and its practical applications in food preservation. This experiment explores how controlled supercooling affects the cellular structure, nutritional content, and longevity of various fruits, potentially revolutionizing food storage methods.',
+    eventDate: '2026-03-01', // Set to future date since it's current/ongoing
+    authors: ['MRT Research Team 2025-2026'],
+    status: 'in-progress',
+    timeline: [
+      {
+        date: 'Fall 2025',
+        title: 'Experimental Design',
+        description: 'Collaborate on developing the lab procedure and methodology',
+      },
+      {
+        date: 'Winter 2026',
+        title: 'Hands-On Experimentation',
+        description: 'Participate in the supercooling experiment during activity period',
+      },
+      {
+        date: 'Spring 2026',
+        title: 'Analysis & Writing',
+        description: 'Contribute to data analysis and write sections of the final research paper',
+      },
+    ],
+    focusAreas: [
+      {
+        title: 'Cellular Structure Analysis',
+        description: 'How does supercooling affect the cellular structure of different fruit types?',
+      },
+      {
+        title: 'Nutritional Content Preservation',
+        description: 'What is the impact of supercooling on nutritional content preservation compared to traditional freezing?',
+      },
+      {
+        title: 'Shelf Life Extension',
+        description: 'Can supercooling extend the shelf life of fruits without compromising texture and flavor?',
+      },
+      {
+        title: 'Optimal Conditions',
+        description: 'What are the optimal supercooling conditions for different fruit species?',
+      },
+    ],
+    resources: [
+      {
+        title: 'Application Form',
+        description: 'Apply to join the supercooling research project',
+        url: 'https://docs.google.com/forms/d/e/1FAIpQLSeCi9QrOVWp9tC5Gy3y2mw621uwWzfuUr3HEAW2lFXtQSMzNQ/viewform?usp=dialog',
+        type: 'link',
+      },
+    ],
+  },
+  
   // Past Lab Projects
   {
     slug: 'dna-extraction-2024',
@@ -280,15 +335,27 @@ export const events: Event[] = [
     resources: [
       {
         title: 'Research Challenge',
-        description: 'Protocol development and standard curve preparation',
-        url: 'https://docs.google.com/document/d/1M4HJzgoqy4YCSecYNC1C0x-swliLzHz5ISi5T3rlC9U/edit?usp=sharing',
+        description: 'Help us make the lab protocol and get a chance to help make the standard curve of calf thymus DNA',
+        url: 'https://docs.google.com/document/d/1bJ9QyFKOUJ1LHnC7qCd515OtPryIZiGSNFgDFyB8w9I/edit?usp=sharing',
         type: 'link',
       },
       {
         title: 'DNA Lab Info Session Slides',
-        description: 'October 2024 - Project overview and protocol briefing',
-        url: 'https://docs.google.com/presentation/d/10uN0dzC9XYiNHpEy8opDjgyBek4obdr1/edit?usp=sharing&ouid=114641253321317277215&rtpof=true&sd=true',
+        description: 'October 2024 - Lab protocol briefing and project overview',
+        url: 'https://docs.google.com/presentation/d/1y7OVCaaV8hAlWeaWw1zam4lXRqXUMmfH0Dp3h0WwKOI/edit?usp=sharing',
         type: 'slides',
+      },
+      {
+        title: 'Lab Project Participation Sheet',
+        description: 'Choose what you want to work on for the DNA extraction lab project',
+        url: 'https://docs.google.com/spreadsheets/d/1SsYNW1PCvA1ErrDCxatfG3jt8HyklQxtT9Dl82yc_eo/edit?usp=sharing',
+        type: 'link',
+      },
+      {
+        title: 'Final Report - DNA Analysis Project (PDF)',
+        description: 'Published research article',
+        url: '/articles/Final Report_DNA Analysis Project.pdf',
+        type: 'pdf',
       },
     ],
   },
@@ -349,7 +416,13 @@ export const events: Event[] = [
     status: 'completed',
     resources: [
       {
-        title: 'Full Literature Review',
+        title: 'Literature Review (PDF)',
+        description: 'Complete nanotechnology in medicine review article',
+        url: '/articles/MRT literature review_Nanotechnologies in Medicine - Copy.pdf',
+        type: 'pdf',
+      },
+      {
+        title: 'Full Literature Review (Google Drive)',
         description: 'Complete nanotechnology in medicine review',
         url: 'https://drive.google.com/file/d/1_RDk9MzQJx9BAbstjx90JqHOaUor4GLH/view',
         type: 'drive',
@@ -367,7 +440,13 @@ export const events: Event[] = [
     status: 'completed',
     resources: [
       {
-        title: 'COVID-19 Research Report',
+        title: 'COVID-19 Research Report (PDF)',
+        description: 'May 2020 compiled research article',
+        url: '/articles/MRT Covid-19 Research Committee.pdf',
+        type: 'pdf',
+      },
+      {
+        title: 'COVID-19 Research Report (Google Drive)',
         description: 'May 2020 compiled research',
         url: 'https://drive.google.com/file/d/11TalbqyTHyJvDh-PzdRH1gr8VwUTDpJ3/view',
         type: 'drive',
@@ -406,9 +485,9 @@ export const events: Event[] = [
     description: 'Discussion on Hwang Woo-suk, cloning and using human embryos in research. Exploring ethical implications in biotechnology.',
     resources: [
       {
-        title: 'Bioethics Roundtable Slides',
+        title: 'Bioethics Roundtable Slides (PDF)',
         description: 'Discussion materials and case studies',
-        url: 'https://marianopolis-research-team.github.io/images/Fall2023_MRT_Bioethics_Roundtable.pdf',
+        url: '/articles/Fall2023_MRT_Bioethics_Roundtable.pdf',
         type: 'pdf',
       },
     ],
@@ -419,14 +498,6 @@ export const events: Event[] = [
     eventDate: '2021-09-01',
     title: 'Science Resources Compilation',
     description: 'A list of science journals, science festivals, podcasts, seminars and student opportunities. Compiled by 2021 execs.',
-    resources: [
-      {
-        title: 'Science Resources PDF',
-        description: 'Comprehensive list of scientific resources',
-        url: 'https://marianopolis-research-team.github.io/images/Resource%20page.pdf',
-        type: 'pdf',
-      },
-    ],
   },
 ];
 
