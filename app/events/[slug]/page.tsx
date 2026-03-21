@@ -1,8 +1,9 @@
 import { Calendar, MapPin, Clock, Users, ArrowLeft, BookOpen, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
-import { getEventBySlug, isEventPast, events, Event } from '@/app/_data/eventsData';
+import { getEventBySlug, isEventPast, getAllEvents, Event } from '@/lib/events';
 import { notFound } from 'next/navigation';
 import ImageGallery from '@/app/_components/ImageGallery';
+import { marked } from 'marked';
 
 const typeConfig: Record<string, { label: string; color: string }> = {
   seminar: { label: 'Seminar', color: 'bg-[#588157]' },
@@ -14,6 +15,7 @@ const typeConfig: Record<string, { label: string; color: string }> = {
 };
 
 export function generateStaticParams() {
+  const events = getAllEvents();
   return events.map((event) => ({
     slug: event.slug,
   }));
@@ -101,9 +103,13 @@ function EventDetailContent({ event }: { event: Event }) {
             {/* Long Description */}
             {event.longDescription && (
               <section
-                className="prose max-w-none"
+                className="prose prose-lg max-w-none"
               >
-                <p className="text-lg text-gray-700 leading-relaxed">{event.longDescription}</p>
+                <div 
+                  dangerouslySetInnerHTML={{ 
+                    __html: marked.parse(event.longDescription) 
+                  }} 
+                />
               </section>
             )}
 

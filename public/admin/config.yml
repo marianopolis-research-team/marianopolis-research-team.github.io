@@ -1,0 +1,38 @@
+backend:
+  name: github
+  repo: marianopolis-research-team/marianopolis-research-team.github.io
+  branch: main
+  # UNCOMMENT BELOW AND ADD YOUR OAUTH SERVER URL FOR PRODUCTION:
+  # base_url: https://your-oauth-server.vercel.app
+  
+# Helper for local development (no OAuth needed)
+# Run: npx decap-server
+local_backend: true
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "events"
+    label: "Events"
+    folder: "content/events"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Type", name: "type", widget: "select", options: ["project", "paper", "seminar", "workshop", "social", "meeting"] }
+      - { label: "Date", name: "eventDate", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Short Description", name: "description", widget: "text" }
+      - { label: "Location", name: "location", widget: "string", required: false }
+      - { label: "Time", name: "time", widget: "string", required: false }
+      - { label: "Body (Long Description)", name: "body", widget: "markdown" }
+      - { label: "Images", name: "images", widget: "list", required: false, field: {label: "Image", name: "image", widget: "image"} }
+      - { label: "Authors", name: "authors", widget: "list", required: false }
+      - { label: "Status", name: "status", widget: "select", options: ["completed", "in-progress", "upcoming"], required: false }
+      - { label: "Key Takeaways", name: "keyTakeaways", widget: "list", required: false }
+      - { label: "Speakers", name: "speakers", widget: "list", required: false, fields: [{label: "Name", name: "name", widget: "string"}, {label: "Bio", name: "bio", widget: "text", required: false}, {label: "Affiliation", name: "affiliation", widget: "string", required: false}] }
+      - { label: "Agenda", name: "agenda", widget: "list", required: false, fields: [{label: "Time", name: "time", widget: "string"}, {label: "Activity", name: "activity", widget: "string"}] }
+      - { label: "Timeline", name: "timeline", widget: "list", required: false, fields: [{label: "Date", name: "date", widget: "string"}, {label: "Title", name: "title", widget: "string"}, {label: "Description", name: "description", widget: "text"}] }
+      - { label: "Resources", name: "resources", widget: "list", required: false, fields: [{label: "Title", name: "title", widget: "string"}, {label: "Description", name: "description", widget: "text", required: false}, {label: "URL", name: "url", widget: "string"}, {label: "Type", name: "type", widget: "select", options: ["pdf", "slides", "article", "link", "drive"]}] }
+      - { label: "Focus Areas", name: "focusAreas", widget: "list", required: false, fields: [{label: "Title", name: "title", widget: "string"}, {label: "Description", name: "description", widget: "text"}] }

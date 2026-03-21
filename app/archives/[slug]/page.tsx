@@ -1,7 +1,7 @@
 import { Calendar, Users, FileText, ArrowLeft, Beaker, BookOpen, MapPin, Clock, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { getEventBySlug, EventType, getPastEvents, Event } from '@/app/_data/eventsData';
+import { getEventBySlug, EventType, getPastEvents, Event } from '@/lib/events';
 import { notFound } from 'next/navigation';
 
 const categoryConfig: Record<string, { label: string; color: string }> = {
