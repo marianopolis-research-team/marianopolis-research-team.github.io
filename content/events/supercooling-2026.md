@@ -4,11 +4,11 @@
   "type": "project",
   "title": "Supercooling Fruits: Effects on Food Preservation",
   "description": "Our lab project this year is on supercooling!",
-  "eventDate": "2026-03-01",
+  "eventDate": "2026-03",
   "authors": [
     "MRT Research Team 2025-2026"
   ],
-  "status": "in-progress",
+  "status": "completed",
   "timeline": [
     {
       "date": "Fall 2025",
@@ -18,7 +18,7 @@
     {
       "date": "Winter 2026",
       "title": "Hands-On Experimentation",
-      "description": "Participate in the supercooling experiment during activity period"
+      "description": "Participate in the supercooling experiment during the March break at Concordia"
     },
     {
       "date": "Spring 2026",
@@ -33,7 +33,7 @@
     },
     {
       "title": "Nutritional Content Preservation",
-      "description": "What is the impact of supercooling on nutritional content preservation compared to traditional freezing?"
+      "description": "What is the impact of supercooling on fruit cell structure and composition compared to traditional freezing?"
     },
     {
       "title": "Shelf Life Extension",
@@ -46,9 +46,9 @@
   ],
   "resources": [
     {
-      "title": "Application Form",
-      "description": "Apply to join the supercooling research project",
-      "url": "https://docs.google.com/forms/d/e/1FAIpQLSeCi9QrOVWp9tC5Gy3y2mw621uwWzfuUr3HEAW2lFXtQSMzNQ/viewform?usp=dialog",
+      "title": "Research Paper",
+      "description": "The final research paper",
+      "url": "/articles/main.pdf",
       "type": "link"
     }
   ]
